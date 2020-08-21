@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}{% trans "About" %} - {{ block.super }}{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+
+        <h1 class="text-center">
+            {% trans "Welcome!" %}
+        </h1>
+
+        <p class="lead my-4">
+            {% trans "Lingo Cafe is an open community of people practising language and socializing." %}
+            {% trans "It connects practitioners to a variety of tutors who assist them through an informal learning process." %}
+        </p>
+
+        <p class="my-4">
+            {% trans "We meet over online video conference calls." %}
+            {% trans "Sessions last up to 2 hours. You can join and leave anytime during the sessions." %}
+            {% trans "Conversations usually take place in groups of 5 or less people depending on the total number of participants and facilitators." %}
+            {% trans "The chat rooms are managed by the hosts." %}
+            {% trans "You will have a chance to participate in many groups during a session." %}
+        </p>
+
+        <p class="my-4">
+            {% trans "Each meeting has one practice language." %}
+            {% trans "Participants are expected to have at least a very basic level of understanding of the session's language." %}
+        </p>
+
+        <p class="my-4">
+            {% trans "During the sessions, hosts guide the participants by facilitating conversations and assisting them during their practices." %}
+        </p>
+
+        <p class="my-4">
+            {% trans "Anyone having fluency in the language of the session can volunteer to be a co-host." %}
+            {% trans "Please indicate your intention to be a co-host when you are signing up for meeting." %}
+        </p>
+
+        <p class="my-4">
+            {% url 'docs_conduct' as url_conduct %}
+            {% blocktrans %}Before participating in any activity, please make sure you fully agree with the community <a href="{{ url_conduct }}">code of conduct</a>.{% endblocktrans %}
+        </p>
+
+    </div>
+
+{% endblock %}

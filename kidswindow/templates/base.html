@@ -1,0 +1,101 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}Kids Window{% endblock %}</title>
+
+    <link rel="icon" type="image/png" href="{% static 'logo.png' %}" />
+
+    <meta property="og:image" content="{% static 'logo.png' %}" />
+    <meta property="og:description" content="{% block description %}{% trans "Kids Window is a free and open social platform for kids to play games." %}{% endblock %}" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <script src="{% static 'js/awesome_django_timezones.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" rel="stylesheet">
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+
+<body>
+
+
+<h1 class="title display-1 mt-3 text-center">
+    <a href="/" style="color: inherit; text-decoration: none;">Kids Window</a>
+</h1>
+
+
+<br>
+
+{% if messages %}
+    <div class="container">
+    {% for message in messages %}
+        <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible mb-4 fade show {{ message.tags }}" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+    </div>
+{% endif %}
+
+
+{% block content %}
+{% endblock %}
+
+    <p class="my-4 text-center">&nbsp;</p>
+
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+
+    <p class="my-4 text-center">
+
+    {% for language in languages %}
+        {% if language.code != LANGUAGE_CODE %}
+            <a href="{% url 'set_lang' %}?lang={{ language.code }}">{{ language.code.upper }}</a>
+        {% else %}
+            <strong>{{ language.code.upper }}</strong>
+        {% endif %}
+        {% if not forloop.last %} | {% endif %}
+    {% endfor %}
+
+    </p>
+
+
+    <p class="my-4 text-center">
+        <a href="https://twitter.com/messages/compose?recipient_id=1245017306046124036&ref_src=twsrc%5Etfw" target="_blank">
+            {% trans "Contact" %}
+        </a>
+        |
+        <a href="https://github.com/onurmatik/kidswindow/issues" target="_blank">
+            {% trans "Report a bug" %}
+        </a>
+    </p>
+
+
+{% block js %}
+{% endblock %}
+
+</body>
+</html>

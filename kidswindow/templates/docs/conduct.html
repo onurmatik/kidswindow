@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}{% trans "Code of Conduct" %} - {{ block.super }}{% endblock %}
+
+
+{% block content %}
+
+
+    <div class="container">
+
+        <h1 class="text-center">
+            {% trans "Code of Conduct" %}
+        </h1>
+
+        <p class="lead my-4">
+            {% trans "The mission of the Lingo Cafe is to provide an open and welcoming social environment to connect anyone interested in practising a language and helping others do so." %}
+        </p>
+
+
+        <h5 class="mt-4">
+            {% trans "Be friendly" %}
+        </h5>
+
+        <p class="my-2">
+            {% trans "We strive to be a community that welcomes and supports people of all backgrounds and identities." %}
+            {% trans "This includes, but is not limited to members of any race, ethnicity, culture, national origin, immigration status, social and economic class, educational level, gender identity and sexual orientation, age, size, mental and physical ability, political stance and belief." %}
+        </p>
+
+
+        <h5 class="mt-4">
+            {% trans "Be kind to others" %}
+        </h5>
+
+        <p class="my-2">
+            {% trans "Members of the Lingo Cafe community should be kind and respectful when communicating with other members." %}
+            {% trans "Harassment and other exclusionary behavior aren't acceptable." %}
+            {% trans "This includes, but is not limited to:" %}
+            <ul>
+                <li>{% trans "Discriminatory jokes and language, sexually explicit or violent expressions, racist or sexist terms and unwelcome sexual attention." %}</li>
+                <li>{% trans "Other people's personally identifying information." %}</li>
+                <li>{% trans "Advocating for, or encouraging, any of the above behavior." %}</li>
+            </ul>
+        </p>
+
+        <p class="my-2">
+            {% trans "This isn’t an exhaustive list of things that you can’t do." %}
+            {% trans "Rather, take it as a guide to make it easier to enrich all of us and the community." %}
+        </p>
+
+        <p class="my-2">
+            {% trans "If you believe someone is violating the code of conduct, please report it by emailing <em>conduct [at] lingo.cafe</em>." %}
+        </p>
+
+
+    </div>
+
+
+{% endblock %}
