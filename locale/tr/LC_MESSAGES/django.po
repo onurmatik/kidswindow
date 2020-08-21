@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-21 09:22+0000\n"
+"POT-Creation-Date: 2020-08-21 09:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: kidswindow/games/apps.py:7 kidswindow/games/models.py:14
+#: kidswindow/profiles/models.py:19
+msgid "games"
+msgstr "oyunlar"
+
 #: kidswindow/games/models.py:6
 msgid "name"
 msgstr "isim"
 
-#: kidswindow/meetings/models.py:10 kidswindow/meetings/models.py:76
-#: kidswindow/profiles/models.py:36
+#: kidswindow/games/models.py:13 kidswindow/meetings/models.py:10
+#: kidswindow/meetings/models.py:78 kidswindow/profiles/models.py:36
 msgid "game"
 msgstr "oyun"
 
-#: kidswindow/meetings/models.py:11 kidswindow/meetings/models.py:82
-#: kidswindow/meetings/models.py:94 kidswindow/profiles/models.py:39
+#: kidswindow/meetings/apps.py:7 kidswindow/meetings/models.py:61
+msgid "meetings"
+msgstr "buluşmalar"
+
+#: kidswindow/meetings/models.py:11 kidswindow/meetings/models.py:84
+#: kidswindow/meetings/models.py:100 kidswindow/profiles/models.py:39
 #: kidswindow/profiles/models.py:61
 msgid "time"
 msgstr "zaman"
@@ -78,16 +87,17 @@ msgstr "diğer"
 msgid "KidsWindow_%(game)s_%(code)s"
 msgstr "KidsWindow_%(game)s_%(code)s"
 
-#: kidswindow/meetings/models.py:65 kidswindow/meetings/models.py:86
+#: kidswindow/meetings/models.py:60 kidswindow/meetings/models.py:65
+#: kidswindow/meetings/models.py:92
 msgid "meeting"
 msgstr "buluşma"
 
-#: kidswindow/meetings/models.py:66 kidswindow/meetings/models.py:78
+#: kidswindow/meetings/models.py:66 kidswindow/meetings/models.py:80
 msgid "participant"
 msgstr "katılımcı"
 
-#: kidswindow/meetings/models.py:67 kidswindow/meetings/models.py:77
-#: kidswindow/meetings/models.py:79
+#: kidswindow/meetings/models.py:67 kidswindow/meetings/models.py:79
+#: kidswindow/meetings/models.py:81
 msgid "co-host"
 msgstr "kolaylaştırıcı"
 
@@ -95,31 +105,55 @@ msgstr "kolaylaştırıcı"
 msgid "time joined"
 msgstr "katılma zamanı"
 
-#: kidswindow/meetings/models.py:75 kidswindow/meetings/models.py:87
+#: kidswindow/meetings/models.py:72
+msgid "meeting participant"
+msgstr "katılımcı"
+
+#: kidswindow/meetings/models.py:73
+msgid "meeting participants"
+msgstr "katılımcılar"
+
+#: kidswindow/meetings/models.py:77 kidswindow/meetings/models.py:93
 #: kidswindow/profiles/models.py:12 kidswindow/profiles/models.py:52
 msgid "user"
 msgstr "kullanıcı"
 
-#: kidswindow/meetings/models.py:81 kidswindow/meetings/models.py:93
+#: kidswindow/meetings/models.py:83 kidswindow/meetings/models.py:99
 #: kidswindow/profiles/models.py:60
 msgid "notes"
 msgstr "notlar"
 
+#: kidswindow/meetings/models.py:87
+msgid "meeting request"
+msgstr "buluşma talebi"
+
 #: kidswindow/meetings/models.py:88
+msgid "meeting requests"
+msgstr "buluşma talepleri"
+
+#: kidswindow/meetings/models.py:94
 msgid "rate"
 msgstr "puan"
 
-#: kidswindow/meetings/models.py:89
+#: kidswindow/meetings/models.py:95
 msgid "Poor"
 msgstr "Yetersiz"
 
-#: kidswindow/meetings/models.py:90
+#: kidswindow/meetings/models.py:96
 msgid "OK"
 msgstr "Orta"
 
-#: kidswindow/meetings/models.py:91
+#: kidswindow/meetings/models.py:97
 msgid "Good"
 msgstr "İyi"
+
+#: kidswindow/meetings/models.py:103
+msgid "meeting poll"
+msgstr "buluşma anketi"
+
+#: kidswindow/meetings/models.py:104
+msgid "meeting polls"
+msgstr "buluşma anketleri"
 
 #: kidswindow/meetings/views.py:28
 msgid "I want to co-host this session"
@@ -153,13 +187,13 @@ msgstr "Eklemek istediklerin."
 msgid "Thank you! Your sugestion is recorded."
 msgstr "Teşekkürler! Önerini aldık."
 
+#: kidswindow/profiles/apps.py:7
+msgid "profiles"
+msgstr "profiller"
+
 #: kidswindow/profiles/models.py:14
 msgid "timezone"
 msgstr "saat dilimi"
-
-#: kidswindow/profiles/models.py:19
-msgid "games"
-msgstr "oyunlar"
 
 #: kidswindow/profiles/models.py:21
 msgid "email confirmed"
@@ -724,9 +758,6 @@ msgstr "Kids Window Yönetimi"
 
 #~ msgid "language"
 #~ msgstr "dil"
-
-#~ msgid "meeting resource"
-#~ msgstr "referans materyal"
 
 #~ msgid "meeting password"
 #~ msgstr "toplanti şifresi"

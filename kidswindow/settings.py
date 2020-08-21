@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'timezone_field',
     'django_countries',
 
-    'kidswindow.games',
-    'kidswindow.profiles',
-    'kidswindow.meetings',
+    'kidswindow.games.apps.GamesConfig',
+    'kidswindow.profiles.apps.ProfilesConfig',
+    'kidswindow.meetings.apps.MeetingsConfig',
 ]
 
 MIDDLEWARE = [

@@ -56,9 +56,9 @@ class Meeting(models.Model):
             self.join_url = self.start_url = 'https://meet.jit.si/%s' % uri
         super().save(**kwargs)
 
-    def clean(self):
-        # TODO: check for overlaps
-        pass
+    class Meta:
+        verbose_name = _('meeting')
+        verbose_name_plural = _('meetings')
 
 
 class MeetingParticipant(models.Model):
@@ -69,6 +69,8 @@ class MeetingParticipant(models.Model):
 
     class Meta:
         unique_together = (('meeting', 'participant'),)
+        verbose_name = _('meeting participant')
+        verbose_name_plural = _('meeting participants')
 
 
 class MeetingRequest(models.Model):
@@ -81,6 +83,10 @@ class MeetingRequest(models.Model):
     notes = models.TextField(_('notes'), blank=True, null=True)
     time = models.DateTimeField(_('time'), auto_now_add=True)
 
+    class Meta:
+        verbose_name = _('meeting request')
+        verbose_name_plural = _('meeting requests')
+
 
 class MeetingPoll(models.Model):
     meeting = models.ForeignKey(Meeting, on_delete=models.CASCADE, verbose_name=_('meeting'))
@@ -92,3 +98,7 @@ class MeetingPoll(models.Model):
     ))
     notes = models.TextField(_('notes'), blank=True, null=True)
     time = models.DateTimeField(_('time'), auto_now_add=True)
+
+    class Meta:
+        verbose_name = _('meeting poll')
+        verbose_name_plural = _('meeting polls')
