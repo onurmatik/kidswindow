@@ -60,16 +60,3 @@ def set_language(request):
         domain=settings.LANGUAGE_COOKIE_DOMAIN,
     )
     return response
-
-
-def set_profile_language_middleware(get_response):
-    def middleware(request):
-        if not request.user.is_anonymous:
-            profile = request.user.profile
-            lang = get_language_from_request(request)
-            if profile.profile_language != lang:
-                profile.profile_language = lang
-                profile.save()
-        return get_response(request)
-
-    return middleware

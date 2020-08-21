@@ -56,7 +56,6 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
 
     'awesome_django_timezones.middleware.TimezonesMiddleware',
-    'kidswindow.views.set_profile_language_middleware',
 ]
 
 ROOT_URLCONF = 'kidswindow.urls'
