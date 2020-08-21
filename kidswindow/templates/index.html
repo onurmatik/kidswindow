@@ -64,7 +64,7 @@
 		<h4 class="mt-4">{% trans "Upcoming" %}</h4>
 
 		<p class="mt-2 text-muted small">
-			{% trans "Language practice meetings" %}
+			{% trans "Gaming sessions" %}
 		</p>
 
 		{% for meeting in meetings_soon %}
@@ -80,9 +80,6 @@
 			{% trans "There are no scheduled meetings." %}
 
 		{% endfor %}
-
-
-		<small class="text-muted">({{ request.COOKIES.timezone }})</small>
 
 
 		{% if meetings_suggested %}
@@ -134,7 +131,7 @@
 		<h4 class="mt-4">{% trans "Suggest" %}</h4>
 
 			<p class="mt-2">
-				{% trans "Want to practice a language or co-host a session?" %}
+				{% trans "Want to start a game or tutor a session?" %}
 
 				<a href="{% url 'meeting_request' %}" class="d-block mt-2">
 					{% trans "Suggest a meeting" %}

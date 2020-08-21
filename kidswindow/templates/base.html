@@ -10,7 +10,7 @@
 
     <title>{% block title %}Kids Window{% endblock %}</title>
 
-    <link rel="icon" type="image/png" href="{% static 'logo.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'icon.jpeg' %}" />
 
     <meta property="og:image" content="{% static 'logo.png' %}" />
     <meta property="og:description" content="{% block description %}{% trans "Kids Window is a free and open social platform for kids to play games." %}{% endblock %}" />
@@ -40,11 +40,11 @@
 
 
 <h1 class="title display-1 mt-3 text-center">
-    <a href="/" style="color: inherit; text-decoration: none;">Kids Window</a>
+    <a href="/" style="color: inherit; text-decoration: none;">
+        <img src="{% static 'logo.jpeg' %}" width="320">
+    </a>
 </h1>
 
-
-<br>
 
 {% if messages %}
     <div class="container">
