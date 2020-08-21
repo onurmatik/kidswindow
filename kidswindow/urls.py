@@ -36,6 +36,6 @@ urlpatterns = [
 ]
 
 
-admin.site.index_title = _('Lingo Cafe')
-admin.site.site_header = _('Lingo Cafe Administration')
-admin.site.site_title = _('Lingo Cafe Management')
+admin.site.index_title = _('Kids Window')
+admin.site.site_header = _('Kids Window Administration')
+admin.site.site_title = _('Kids Window Management')

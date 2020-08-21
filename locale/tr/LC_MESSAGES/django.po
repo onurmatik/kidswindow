@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-21 08:55+0000\n"
+"POT-Creation-Date: 2020-08-21 09:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -206,19 +206,19 @@ msgstr "Epostan başarıyla onaylandı!"
 msgid "Email confirmation failed!"
 msgstr "Eposta onayı başarısız oldu!"
 
-#: kidswindow/settings.py:123
+#: kidswindow/settings.py:122
 msgid "English"
 msgstr ""
 
-#: kidswindow/settings.py:124
+#: kidswindow/settings.py:123
 msgid "Turkish"
 msgstr ""
 
 #: kidswindow/templates/base.html:16
 msgid "Kids Window is a free and open social platform for kids to play games."
 msgstr ""
-"Kids Window video bağlantılar ile oyun oynayarak sosyalleşmek için açık ve ücretsiz bir "
-"alandır."
+"Kids Window video bağlantılar ile oyun oynayarak sosyalleşmek için açık ve "
+"ücretsiz bir alandır."
 
 #: kidswindow/templates/base.html:88
 msgid "Contact"
@@ -497,8 +497,8 @@ msgid ""
 "Kids Window is a free and open platform for kids to play conventional games "
 "online via video calls."
 msgstr ""
-"Kids Window çocukların online video buluşmalarıyla oyun oynamaları için açık ve "
-"ücretsiz bir platformdur."
+"Kids Window çocukların online video buluşmalarıyla oyun oynamaları için açık "
+"ve ücretsiz bir platformdur."
 
 #: kidswindow/templates/index.html:157
 msgid "Details"
@@ -673,16 +673,19 @@ msgid "Sign in"
 msgstr "Giriş yap"
 
 #: kidswindow/urls.py:39
-msgid "Lingo Cafe"
-msgstr "Lingo Cafe"
+msgid "Kids Window"
+msgstr "Kids Window"
 
 #: kidswindow/urls.py:40
-msgid "Lingo Cafe Administration"
-msgstr "Lingo Cafe Yönetimi"
+msgid "Kids Window Administration"
+msgstr "Kids Window Yönetimi"
 
 #: kidswindow/urls.py:41
-msgid "Lingo Cafe Management"
-msgstr "Lingo Cafe Yönetimi"
+msgid "Kids Window Management"
+msgstr "Kids Window Yönetimi"
+
+#~ msgid "Lingo Cafe"
+#~ msgstr "Lingo Cafe"
 
 #~ msgid "code"
 #~ msgstr "kod"
