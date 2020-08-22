@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.urls import translate_url
-from django.utils.translation import LANGUAGE_SESSION_KEY, get_language_from_request
+from django.utils.translation import LANGUAGE_SESSION_KEY
 from django.views.generic import TemplateView
 from kidswindow.meetings.models import Meeting
 
@@ -36,7 +36,7 @@ class IndexView(TemplateView):
                     participants=self.request.user
                 ).distinct().order_by('time'),
                 'meetings_suggested': qs.filter(
-                    language__in=self.request.user.profile.languages.all()
+                    game__in=self.request.user.profile.games.all()
                 ).exclude(
                     participants=self.request.user
                 ).order_by('time'),
