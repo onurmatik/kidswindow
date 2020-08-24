@@ -1,11 +1,11 @@
 {% load i18n %}{% autoescape off %}{% url 'activate' uidb64=uid token=token as activation_url %}
-{% blocktrans with user.first_name as name %}Hi {{ name }},
+Merhaba {{ user.first_name }},
 
-Please click on the link below to confirm your email address:
+E-posta adresini doğrulamak için aşağıdaki linke tıkla:
 
-https://lingo.cafe{{ activation_url }}
+https://kidswindow.online{{ activation_url }}
 
 
-See at a lingo meeting soon!
-{% endblocktrans %}
+Yakında beraber oynamak dileğiyle!
+Kids Window
 {% endautoescape %}

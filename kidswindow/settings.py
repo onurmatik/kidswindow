@@ -119,7 +119,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = [
-    ('en', _('English')),
+#    ('en', _('English')),
     ('tr', _('Turkish')),
 ]
 
