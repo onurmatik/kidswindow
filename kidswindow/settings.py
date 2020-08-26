@@ -152,7 +152,7 @@ LOGIN_REDIRECT_URL = 'index'
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django_ses.SESBackend'
-DEFAULT_FROM_EMAIL = 'Kids Window Cafe <hello@kidswindow.online>'
+DEFAULT_FROM_EMAIL = 'Kids Window <hello@kidswindow.online>'
 
 
 try:
