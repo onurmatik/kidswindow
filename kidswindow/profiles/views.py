@@ -42,9 +42,9 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=u.username, password=raw_password)
             login(request, user)
-            messages.success(request, _('Welcome to Lingo Cafe! A confirmation email is sent to %s.') % u.email)
+            messages.success(request, _("Welcome to Kids Window! A confirmation email is sent to %s.") % u.email)
             user.email_user(
-                _('Welcome to Lingo Cafe!'),
+                _('Welcome to Kids Window!'),
                 render_to_string('registration/email_confirmation.html', {
                     'user': user,
                     'uid': urlsafe_base64_encode(force_bytes(user.pk)),

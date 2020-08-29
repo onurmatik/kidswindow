@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-21 09:34+0000\n"
+"POT-Creation-Date: 2020-08-29 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -224,13 +224,12 @@ msgid "You are already logged in!"
 msgstr "Zaten giriş yapmış durumdasın!"
 
 #: kidswindow/profiles/views.py:45
-#, python-format
-msgid "Welcome to Lingo Cafe! A confirmation email is sent to %s."
-msgstr "Lingo Cafe'ye hoşgeldin! Onay epostası %s adresine gönderildi."
+msgid "Welcome to Kids Window! A confirmation email is sent to %s."
+msgstr "Kids Window'a hoşgeldin! Onay epostası %s adresine gönderildi."
 
 #: kidswindow/profiles/views.py:47
-msgid "Welcome to Lingo Cafe!"
-msgstr "Lingo Cafe'ye hoşgeldin!"
+msgid "Welcome to Kids Window!"
+msgstr "Kids Window'a hoşgeldin!"
 
 #: kidswindow/profiles/views.py:88
 msgid "Your email is confirmed successfully!"
@@ -239,10 +238,6 @@ msgstr "Epostan başarıyla onaylandı!"
 #: kidswindow/profiles/views.py:91
 msgid "Email confirmation failed!"
 msgstr "Eposta onayı başarısız oldu!"
-
-#: kidswindow/settings.py:122
-msgid "English"
-msgstr ""
 
 #: kidswindow/settings.py:123
 msgid "Turkish"
@@ -254,11 +249,11 @@ msgstr ""
 "Kids Window video bağlantılar ile oyun oynayarak sosyalleşmek için açık ve "
 "ücretsiz bir alandır."
 
-#: kidswindow/templates/base.html:88
+#: kidswindow/templates/base.html:91
 msgid "Contact"
 msgstr "İletişim"
 
-#: kidswindow/templates/base.html:92
+#: kidswindow/templates/base.html:95
 msgid "Report a bug"
 msgstr "Sorun bildir"
 
@@ -375,97 +370,6 @@ msgstr ""
 msgid "About"
 msgstr "Hakkında"
 
-#: kidswindow/templates/docs/details.html:13
-msgid "Welcome!"
-msgstr "Hoşgeldin!"
-
-#: kidswindow/templates/docs/details.html:17
-msgid ""
-"Lingo Cafe is an open community of people practising language and "
-"socializing."
-msgstr ""
-"Lingo Cafe dil pratiği yapmak için kurulmuş açık ve ücretsiz bir sosyal "
-"alandır."
-
-#: kidswindow/templates/docs/details.html:18
-msgid ""
-"It connects practitioners to a variety of tutors who assist them through an "
-"informal learning process."
-msgstr ""
-"Dil pratiği yapmak isteyenlerle gönüllü eğitmen ve kolaylaştırıcıları "
-"arkadaşça bir öğrenme sürecinde buluşturur."
-
-#: kidswindow/templates/docs/details.html:22
-msgid "We meet over online video conference calls."
-msgstr "Çevrimiçi video konferans görüşmeleri üzerinden bir araya geliriz."
-
-#: kidswindow/templates/docs/details.html:23
-msgid ""
-"Sessions last up to 2 hours. You can join and leave anytime during the "
-"sessions."
-msgstr ""
-"Oturumlar 2 saate kadar sürer. Oturumlar boyunca istediğiniz zaman "
-"katılabilir ve ayrılabilirsiniz."
-
-#: kidswindow/templates/docs/details.html:24
-msgid ""
-"Conversations usually take place in groups of 5 or less people depending on "
-"the total number of participants and facilitators."
-msgstr ""
-"Sohbetler genellikle toplam katılımcı ve kolaylaştırıcı sayısına bağlı "
-"olarak 5 veya daha az kişilik gruplar halinde yapılır."
-
-#: kidswindow/templates/docs/details.html:25
-msgid "The chat rooms are managed by the hosts."
-msgstr "Sohbet odaları kolaylaştırıcılar tarafından yönetilir."
-
-#: kidswindow/templates/docs/details.html:26
-msgid "You will have a chance to participate in many groups during a session."
-msgstr "Katılımcıların bir oturum sırasında birçok gruba katılma şansı olur."
-
-#: kidswindow/templates/docs/details.html:30
-msgid "Each meeting has one practice language."
-msgstr "Her toplantının pratik edilen bir tane dili vardır."
-
-#: kidswindow/templates/docs/details.html:31
-msgid ""
-"Participants are expected to have at least a very basic level of "
-"understanding of the session's language."
-msgstr ""
-"Katılımcıların oturumun dilini en azından çok temel düzeyde biliyor olmaları "
-"beklenir."
-
-#: kidswindow/templates/docs/details.html:35
-msgid ""
-"During the sessions, hosts guide the participants by facilitating "
-"conversations and assisting them during their practices."
-msgstr ""
-"Oturumlar sırasında kolaylaştırıcılar, konuşmaları yönlendirerek ve pratik "
-"çalışması sırasında onlara yardımcı olarak katılımcılara rehberlik eder."
-
-#: kidswindow/templates/docs/details.html:39
-msgid ""
-"Anyone having fluency in the language of the session can volunteer to be a "
-"co-host."
-msgstr ""
-"Oturumun dilini akıcı bir şekilde konuşabilen herkes gönüllü kolaylaştırıcı "
-"olabilir."
-
-#: kidswindow/templates/docs/details.html:40
-msgid ""
-"Please indicate your intention to be a co-host when you are signing up for "
-"meeting."
-msgstr "Lütfen toplantıya kaydolurken kolaylaştırıcı olma isteğinizi belirtin."
-
-#: kidswindow/templates/docs/details.html:45
-#, python-format
-msgid ""
-"Before participating in any activity, please make sure you fully agree with "
-"the community <a href=\"%(url_conduct)s\">code of conduct</a>."
-msgstr ""
-"Herhangi bir etkinliğe katılmadan önce, lütfen <a href=\"%(url_conduct)s"
-"\">topluluk kurallarını</a> okuyun ve tamamen benimsediğinizden emin olun."
-
 #: kidswindow/templates/docs/privacy.html:4
 #: kidswindow/templates/docs/privacy.html:13
 msgid "Privacy Policy"
@@ -538,22 +442,18 @@ msgstr ""
 msgid "Details"
 msgstr "Detaylar"
 
-#: kidswindow/templates/index.html:168
-msgid "Code of conduct"
-msgstr "Topluluk kuralları"
-
-#: kidswindow/templates/index.html:178
+#: kidswindow/templates/index.html:166
 #: kidswindow/templates/registration/login.html:41
 msgid "Login"
 msgstr "Giriş"
 
-#: kidswindow/templates/index.html:182
+#: kidswindow/templates/index.html:168
 #: kidswindow/templates/registration/login.html:20
 #: kidswindow/templates/registration/signup.html:32
 msgid "Sign up"
 msgstr "Kayıt ol"
 
-#: kidswindow/templates/index.html:205
+#: kidswindow/templates/index.html:190
 msgid "Are you sure you want to cancel your participation?"
 msgstr "Katılımını iptal etmek istediğine emin misin?"
 
@@ -660,27 +560,6 @@ msgstr "Kolaylaştırıcı olmak istiyorum"
 msgid "Count me in!"
 msgstr "Beni de ekle!"
 
-#: kidswindow/templates/registration/email_confirmation.html:2
-#, python-format
-msgid ""
-"Hi %(name)s,\n"
-"\n"
-"Please click on the link below to confirm your email address:\n"
-"\n"
-"https://lingo.cafe%(activation_url)s\n"
-"\n"
-"\n"
-"See at a lingo meeting soon!\n"
-msgstr ""
-"Merhaba %(name)s,\n"
-"\n"
-"Eposta adresini doğrulamak için lütfen aşağıdaki bağlantıya tıkla:\n"
-"\n"
-"https://lingo.cafe%(activation_url)s\n"
-"\n"
-"\n"
-"Yakında bir Lingo buluşmasında görüşmek üzere!\n"
-
 #: kidswindow/templates/registration/login.html:5
 #, python-format
 msgid ""
@@ -706,17 +585,121 @@ msgstr "Hesabın var mı?"
 msgid "Sign in"
 msgstr "Giriş yap"
 
-#: kidswindow/urls.py:39
+#: kidswindow/urls.py:37
 msgid "Kids Window"
 msgstr "Kids Window"
 
-#: kidswindow/urls.py:40
+#: kidswindow/urls.py:38
 msgid "Kids Window Administration"
 msgstr "Kids Window Yönetimi"
 
-#: kidswindow/urls.py:41
+#: kidswindow/urls.py:39
 msgid "Kids Window Management"
 msgstr "Kids Window Yönetimi"
+
+#~ msgid "Welcome!"
+#~ msgstr "Hoşgeldin!"
+
+#~ msgid ""
+#~ "Lingo Cafe is an open community of people practising language and "
+#~ "socializing."
+#~ msgstr ""
+#~ "Lingo Cafe dil pratiği yapmak için kurulmuş açık ve ücretsiz bir sosyal "
+#~ "alandır."
+
+#~ msgid ""
+#~ "It connects practitioners to a variety of tutors who assist them through "
+#~ "an informal learning process."
+#~ msgstr ""
+#~ "Dil pratiği yapmak isteyenlerle gönüllü eğitmen ve kolaylaştırıcıları "
+#~ "arkadaşça bir öğrenme sürecinde buluşturur."
+
+#~ msgid "We meet over online video conference calls."
+#~ msgstr "Çevrimiçi video konferans görüşmeleri üzerinden bir araya geliriz."
+
+#~ msgid ""
+#~ "Sessions last up to 2 hours. You can join and leave anytime during the "
+#~ "sessions."
+#~ msgstr ""
+#~ "Oturumlar 2 saate kadar sürer. Oturumlar boyunca istediğiniz zaman "
+#~ "katılabilir ve ayrılabilirsiniz."
+
+#~ msgid ""
+#~ "Conversations usually take place in groups of 5 or less people depending "
+#~ "on the total number of participants and facilitators."
+#~ msgstr ""
+#~ "Sohbetler genellikle toplam katılımcı ve kolaylaştırıcı sayısına bağlı "
+#~ "olarak 5 veya daha az kişilik gruplar halinde yapılır."
+
+#~ msgid "The chat rooms are managed by the hosts."
+#~ msgstr "Sohbet odaları kolaylaştırıcılar tarafından yönetilir."
+
+#~ msgid ""
+#~ "You will have a chance to participate in many groups during a session."
+#~ msgstr ""
+#~ "Katılımcıların bir oturum sırasında birçok gruba katılma şansı olur."
+
+#~ msgid "Each meeting has one practice language."
+#~ msgstr "Her toplantının pratik edilen bir tane dili vardır."
+
+#~ msgid ""
+#~ "Participants are expected to have at least a very basic level of "
+#~ "understanding of the session's language."
+#~ msgstr ""
+#~ "Katılımcıların oturumun dilini en azından çok temel düzeyde biliyor "
+#~ "olmaları beklenir."
+
+#~ msgid ""
+#~ "During the sessions, hosts guide the participants by facilitating "
+#~ "conversations and assisting them during their practices."
+#~ msgstr ""
+#~ "Oturumlar sırasında kolaylaştırıcılar, konuşmaları yönlendirerek ve "
+#~ "pratik çalışması sırasında onlara yardımcı olarak katılımcılara rehberlik "
+#~ "eder."
+
+#~ msgid ""
+#~ "Anyone having fluency in the language of the session can volunteer to be "
+#~ "a co-host."
+#~ msgstr ""
+#~ "Oturumun dilini akıcı bir şekilde konuşabilen herkes gönüllü "
+#~ "kolaylaştırıcı olabilir."
+
+#~ msgid ""
+#~ "Please indicate your intention to be a co-host when you are signing up "
+#~ "for meeting."
+#~ msgstr ""
+#~ "Lütfen toplantıya kaydolurken kolaylaştırıcı olma isteğinizi belirtin."
+
+#, python-format
+#~ msgid ""
+#~ "Before participating in any activity, please make sure you fully agree "
+#~ "with the community <a href=\"%(url_conduct)s\">code of conduct</a>."
+#~ msgstr ""
+#~ "Herhangi bir etkinliğe katılmadan önce, lütfen <a href=\"%(url_conduct)s"
+#~ "\">topluluk kurallarını</a> okuyun ve tamamen benimsediğinizden emin olun."
+
+#~ msgid "Code of conduct"
+#~ msgstr "Topluluk kuralları"
+
+#, python-format
+#~ msgid ""
+#~ "Hi %(name)s,\n"
+#~ "\n"
+#~ "Please click on the link below to confirm your email address:\n"
+#~ "\n"
+#~ "https://lingo.cafe%(activation_url)s\n"
+#~ "\n"
+#~ "\n"
+#~ "See at a lingo meeting soon!\n"
+#~ msgstr ""
+#~ "Merhaba %(name)s,\n"
+#~ "\n"
+#~ "Eposta adresini doğrulamak için lütfen aşağıdaki bağlantıya tıkla:\n"
+#~ "\n"
+#~ "https://lingo.cafe%(activation_url)s\n"
+#~ "\n"
+#~ "\n"
+#~ "Yakında bir Lingo buluşmasında görüşmek üzere!\n"
 
 #~ msgid "Lingo Cafe"
 #~ msgstr "Lingo Cafe"
