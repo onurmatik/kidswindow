@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.views.generic import TemplateView, RedirectView
 from django.utils.translation import ugettext as _
 from django.contrib.auth.views import LoginView
-from kidswindow.meetings.views import meeting_list, meeting_detail, meeting_rsvp, meeting_rsvp_cancel, meeting_request
+from kidswindow.meetings.views import meeting_list, meeting_detail
 from kidswindow.profiles.views import signup, AuthForm, activate
 from kidswindow.views import IndexView, set_language
 
@@ -24,10 +24,7 @@ urlpatterns = [
 
     path('', IndexView.as_view(), name='index'),
 
-    path('meetings/<int:meeting_id>/', meeting_detail, name='meeting_detail'),
-    path('meetings/<int:meeting_id>/rsvp/', meeting_rsvp, name='meeting_rsvp'),
-    path('meetings/<int:meeting_id>/rsvp_cancel/', meeting_rsvp_cancel, name='meeting_rsvp_cancel'),
-    path('meetings/request/', meeting_request, name='meeting_request'),
+    path('meetings/<slug:meeting_slug>/', meeting_detail, name='meeting_detail'),
     path('meetings/', meeting_list, name='meeting_list'),
 
     path('docs/about/', TemplateView.as_view(template_name='docs/details.html'), name='docs_details'),

@@ -1,12 +1,13 @@
 from django.contrib import admin
-from .models import Meeting, MeetingParticipant, MeetingRequest, MeetingPoll
+from .models import Meeting, MeetingParticipant, MeetingPoll
 
 
 @admin.register(Meeting)
 class MeetingAdmin(admin.ModelAdmin):
-    list_display = ['game', 'type', 'host', 'time', 'start_url', 'join_url']
-    list_filter = ['game', 'time']
-    search_fields = ['host__username']
+    list_display = ['game', 'is_public', 'host', 'time']
+    list_editable = ['is_public']
+    list_filter = ['game', 'time', 'is_public']
+    search_fields = ['host__username', 'game__name']
     autocomplete_fields = ['game', 'host', 'participants']
 
 
@@ -18,11 +19,6 @@ class MeetingParticipantAdmin(admin.ModelAdmin):
     def meeting_time(self, obj):
         return obj.meeting.time
     meeting_time.admin_order_field = 'meeting__time'
-
-
-@admin.register(MeetingRequest)
-class MeetingRequestAdmin(admin.ModelAdmin):
-    list_display = ['user', 'game', 'tutor', 'time']
 
 
 @admin.register(MeetingPoll)

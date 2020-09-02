@@ -13,7 +13,7 @@
 
     <div class="text-center">
 
-        <h1 class="mb-2">
+        <h1 class="my-4">
             {% if meeting.type == 2 %}
                 {% trans "Community meeting" %}
                 <small class="text-muted d-block my-2">
@@ -27,39 +27,6 @@
             {% endif %}
         </h1>
 
-        {% if meeting.topic %}
-        <h4 class="my-4">
-            "{{ meeting.topic }}"
-        </h4>
-        {% endif %}
-
-        {% if meeting.resources.all %}
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <table align="center" class="text-left table">
-                    <tr>
-                        <td class="text-muted">
-                            {% trans "Resource" %}
-                        </td>
-                        <td class="text-muted">
-                            {% trans "Level" %}
-                        </td>
-                    </tr>
-                    {% for resource in meeting.resources.all %}
-                    <tr>
-                        <td>
-                            <a href="{{ resource.url }}" target="_blank">{{ resource.title }}</a>
-                        </td>
-                        <td>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="{{ resource.get_level_display }}">{{ resource.level }}</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
     </div>
 
     <br>
@@ -68,15 +35,7 @@
 
         <p class="text-center">
 
-            {% if meeting.type == 2 %}
-
-                <div class="lead text-muted text-center mb-4">
-
-                    {% trans "Community meetings are open sessions for discussing the current issues and the future of the Lingo community." %}
-
-                </div>
-
-            {% elif meeting.notes %}
+            {% if meeting.notes %}
 
                 <div class="lead text-muted text-center mb-4">
 
@@ -86,93 +45,17 @@
 
             {% endif %}
 
-            <div class="lead text-center">
+            <div id="meet" class="text-center">
+            </div>
 
-            {% if meeting.host == user %}
-
-                {% trans "You are hosting this session." %}
-                <div class="text-center mt-4">
-                    <a href="{{ meeting.start_url }}" target="_blank" class="btn btn-primary btn-lg">{% trans "Start the meeting" %}</a>
+            <p class="form-text text-muted mt-4">
+                Aşağıdaki bağlantı ile yeni katılımcı davet edebilirsin
+            </p>
+            <div class="input-group input-group-lg mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="oi oi-link-intact"></span></span></span></span>
                 </div>
-
-            {% else %}
-
-                {% if participation %}
-
-                    {% if participation.tutor %}
-                        {% trans "You are co-hosting this session." %}
-                    {% else %}
-                        {% trans "You are attending this session." %}
-                    {% endif %}
-
-                    <div class="text-center mt-4">
-                        <a href="{{ meeting.join_url }}" target="_blank"
-                           class="btn btn-primary btn-lg {% if not join_link_enabled %}disabled{% endif %}"
-                           {% if not join_link_enabled %} style="background-color: #666; border-color: #666;"{% endif %}
-                        >
-                            {% trans "Go to the meeting" %}
-                        </a>
-                        {% if meeting_status != 'NOW' %}
-                            <div class="text-muted my-2">
-                                {% blocktrans with meeting.time|timeuntil as timeuntil %}{{ timeuntil }} left{% endblocktrans %}
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="mt-4 text-center">
-                        <a href="{% url 'meeting_rsvp_cancel' meeting_id=meeting.id %}">{% trans "Cancel your participation" %}</a>
-                    </div>
-
-                {% else %}
-
-                    {% if user.is_anonymous %}
-
-                        <a href="{% url 'meeting_rsvp' meeting_id=meeting.id %}" class="btn btn-primary btn-lg">
-                            {% trans "Join this session!" %}
-                        </a>
-
-                    {% else %}
-
-                        <h5 class="text-center my-4">{% trans "Join this session!" %}</h5>
-
-                        <form method="post" action="{% url 'meeting_rsvp' meeting_id=meeting.id %}">
-
-                            {% csrf_token %}
-
-                            <div id="div_id_tutor" class="form-group">
-
-                                {% if meeting.type == 1 %}
-
-                                <table align="center">
-                                    <tr>
-                                        <td>
-                                            {{ form|crispy }}
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                {% endif %}
-
-                            </div>
-
-                            <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-primary btn-lg">{% trans "Reserve your place" %}</button>
-
-                                <p class="small text-muted mt-4">
-                                    {% url 'docs_conduct' as url_conduct %}
-                                    {% blocktrans %}By joining a session, you accept the community <a href="{{ url_conduct }}">code of conduct</a>.{% endblocktrans %}
-                                </p>
-
-                            </div>
-
-                        </form>
-
-                    {% endif %}
-
-                {% endif %}
-
-            {% endif %}
-
+                <input type="text" class="form-control" value="https://kidswindow.online{{ meeting.get_absolute_url }}" aria-label="{% trans "Campaign link" %}" onClick="this.setSelectionRange(0, this.value.length)">
             </div>
 
         </p>
@@ -203,24 +86,38 @@
 
     {% endif %}
 
-    <p class="my-3">&nbsp;</p>
-
-    <p class="my-4 text-center">
-
-        <a href="https://twitter.com/share?url={{ request.build_absolute_uri }}&text={% blocktrans with time=meeting.time %}Join the {{ meeting }} session @ {{ time }}{% endblocktrans %} at Lingo Cafe&ref_src=twsrc%5Etfw" target="_blank">
-            <img src="{% static 'logo-twitter.svg' %}" height="28" style="opacity: .5;" alt="{% trans 'Share on Twitter' %}">
-        </a>
-
-    </p>
-
-
 </div>
 
 
 {% endblock %}
 
 
+{% block head %}
+    <script src='https://meet.jit.si/external_api.js'></script>
+{% endblock %}
+
+
 {% block js %}
+
+<script>
+    const domain = 'meet.jit.si';
+    const options = {
+        roomName: '{{ meeting.slug }}',
+        width: '100%',
+        height: 600,
+        parentNode: document.querySelector('#meet'),
+        interfaceConfigOverwrite: {
+            TOOLBAR_BUTTONS: [
+                'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
+                'fodeviceselection', 'hangup', 'profile', 'chat', 'recording',
+                'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
+                'videoquality', 'filmstrip', 'feedback', 'stats', 'shortcuts',
+                'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone', 'security'
+            ]
+        }
+    };
+    const api = new JitsiMeetExternalAPI(domain, options);
+</script>
 
 <script>
 

@@ -17,20 +17,20 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         now = timezone.now()
-        meetings = Meeting.objects.exclude(cancelled=True)
+        meetings = Meeting.objects.all()
         context.update({
             'meeting_now':meetings.filter(
                 time__lte=now,
                 time__gt=now - timedelta(minutes=DEFAULT_MEETING_DURATION_MINS)
             ).first(),
-            'meetings_soon': meetings.filter(time__gte=now).exclude(type=2).order_by('time')[:6],
-            'meetings_community': meetings.filter(time__gte=now).filter(type=2).order_by('time')[:6],
+            'meetings_soon': meetings.filter(time__gte=now).filter(is_public=True).order_by('time')[:6],
+            'meetings_community': meetings.filter(time__gte=now).filter(is_public=True).order_by('time')[:6],
             'now': now,
         })
         if not self.request.user.is_anonymous:
             qs = Meeting.objects.filter(
                 time__gt=timezone.now() - timedelta(minutes=DEFAULT_MEETING_DURATION_MINS)
-            ).exclude(type=2)
+            )
             context.update({
                 'meetings_user': qs.filter(
                     participants=self.request.user
