@@ -6,52 +6,11 @@
 
 	<div class="container text-center">
 
-		{% if meetings_user %}
+		{% if meetings_now %}
 
-			{% with meetings_user.0 as meeting %}
-
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<div class="alert alert-success mb-3 show" role="alert">
-						<strong>
-							{% if meeting.time < now %}
-								{% trans "Your meeting is live now!" %}
-							{% else %}
-								{% trans "Your next meeting:" %}
-							{% endif %}
-							<br>
-							<a href="{{ meeting.get_absolute_url }}">
-								{{ meeting }} @ {{ meeting.time }}
-							</a>
-						</strong>
-					</div>
-				</div>
-			</div>
-
-			{% endwith %}
-
-
-			<h4 class="mt-4">{% trans "Your meetings" %}</h4>
+			<h4 class="mt-4">Şu anda oynanan oyunlar</h4>
 
 			<p class="mt-2">
-
-				{% for meeting in meetings_user %}
-					<a href="{{ meeting.get_absolute_url }}">
-						{{ meeting }} @ {{ meeting.time }}
-					</a>
-				{% endfor %}
-
-			</p>
-
-		{% endif %}
-
-
-		{% if meeting_now %}
-
-			<h4 class="mt-4">{% trans "Now" %}</h4>
-
-			<p class="mt-2">
-
 
 				<a href="{{ meeting_now.get_absolute_url }}">
 					{{ meeting_now }} @ {{ meeting_now.time }}
@@ -61,13 +20,9 @@
 
 		{% endif %}
 
-		<h4 class="mt-4">{% trans "Upcoming" %}</h4>
+		<h4 class="mt-4">Yakında başlayacak oyunlar</h4>
 
-		<p class="mt-2 text-muted small">
-			{% trans "Gaming sessions" %}
-		</p>
-
-		{% for meeting in meetings_soon %}
+		{% for meeting in upcoming_games %}
 
 			<p class="mt-2">
 				<a href="{{ meeting.get_absolute_url }}">
@@ -77,18 +32,20 @@
 
 		{% empty %}
 
-			{% trans "There are no scheduled meetings." %}
+			<p class="mt-2 text-muted">
+				Planlanmış oyun bulunmuyor
+			</p>
 
 		{% endfor %}
 
 
-		{% if meetings_suggested %}
+		{% if meetings_user %}
 
-			<h4 class="mt-4">{% trans "Recommended" %}</h4>
+			<h4 class="mt-4">Buluşmaların</h4>
 
 			<p class="mt-2">
 
-				{% for meeting in meetings_suggested %}
+				{% for meeting in meetings_user %}
 
 					<p class="mt-2">
 						<a href="{{ meeting.get_absolute_url }}">
@@ -103,17 +60,13 @@
 		{% endif %}
 
 
-		{% if meetings_community %}
+		{% if upcoming_tournaments %}
 
-			<h4 class="mt-4">{% trans "Community meetings" %}</h4>
-
-			<p class="mt-2 text-muted small">
-				{% trans "Discussions about the Kids Window community" %}
-			</p>
+			<h4 class="mt-4">Turnuvalar</h4>
 
 			<p class="mt-2">
 
-				{% for meeting in meetings_community %}
+				{% for meeting in upcoming_tournaments %}
 
 					<p class="mt-2">
 						<a href="{{ meeting.get_absolute_url }}">
@@ -128,34 +81,51 @@
 		{% endif %}
 
 
-		<h4 class="mt-4">{% trans "Suggest" %}</h4>
+		{% if upcoming_events %}
+
+			<h4 class="mt-4">Etkinlikler</h4>
 
 			<p class="mt-2">
-				{% trans "Want to start a game or tutor a session?" %}
 
-				<a href="" class="d-block mt-2">
-					{% trans "Suggest a meeting" %}
+				{% for meeting in upcoming_events %}
+
+					<p class="mt-2">
+						<a href="{{ meeting.get_absolute_url }}">
+							{{ meeting }} @ {{ meeting.time }}
+						</a>
+					</p>
+
+				{% endfor %}
+
+			</p>
+
+		{% endif %}
+
+
+		<p class="mt-4">
+			Sen de bir oyun başlatabilirsin!
+
+			<span class="d-block my-1">
+				<a href="{% url 'meeting_create' %}" class="btn btn-success">
+					Oyun başlat
 				</a>
-			</p>
+			</span>
+		</p>
 
 
-		<h4 class="mt-4">{% trans "About" %}</h4>
+		<h5 class="mt-4">Kids Window Hakkında</h5>
 
 		<div class="row">
 
 			<p class="mt-2 w-md-50 mx-auto">
-
-				{% trans "Kids Window is a free and open platform for kids to play conventional games online via video calls." %}
-
+				Kids Window, çocukların online video buluşmalarıyla bir araya gelerek oyun oynamaları için açık ve ücretsiz bir platformdur.
 			</p>
 
 		</div>
 
 		<p class="mt-2">
 
-			<a href="{% url 'docs_details' %}">
-				{% trans "Details" %}
-			</a>
+			<a href="{% url 'docs_details' %}">Detaylar</a>
 
 		</p>
 
@@ -163,9 +133,9 @@
 			<br>
 			<p class="mt-4 text-center">
 
-				<a href="{% url 'auth' %}">{% trans "Login" %}</a>
+				<a href="{% url 'auth' %}">Giriş yap</a>
 				|
-				<a href="{% url 'signup' %}">{% trans "Sign up" %}</a>
+				<a href="{% url 'signup' %}">Üye ol</a>
 
 			</p>
 		{% endif %}
@@ -173,30 +143,5 @@
 
 	</div>
 
-
-{% endblock %}
-
-
-{% block js %}
-
-<script>
-
-	$(function() {
-
-		$('.rsvp_cancel').on('click', function(e) {
-
-			e.preventDefault();
-
-			if (confirm('{% trans "Are you sure you want to cancel your participation?" %}')) {
-
-				window.location = $(this).data('url');
-
-			};
-
-		});
-
-	});
-
-</script>
 
 {% endblock %}

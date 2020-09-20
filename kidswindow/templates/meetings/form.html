@@ -2,7 +2,7 @@
 {% load i18n crispy_forms_tags i18n %}
 
 
-{% block title %}{% trans "Suggest a meeting" %} - {{ block.super }}{% endblock %}
+{% block title %}Oyun buluşması yarat - {{ block.super }}{% endblock %}
 
 
 {% block content %}
@@ -10,7 +10,7 @@
 <div class="container">
 
     <h2 class="my-4 text-center">
-        Buluşma yarat
+        Yeni oyun buluşması yarat
     </h2>
 
     <div class="row">
@@ -24,7 +24,7 @@
                 {{ form|crispy }}
 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">{% trans "Suggest" %}</button>
+                    <button type="submit" class="btn btn-primary">Buluşma yarat</button>
                 </div>
 
             </form>

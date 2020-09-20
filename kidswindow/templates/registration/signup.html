@@ -6,13 +6,13 @@
 
 	<div class="container my-4">
 
-        <h2 class="text-center">Sign up</h2>
+        <h2 class="text-center">Kayıt ol</h2>
 
         <div class="text-center">
             <p class="mt-4 mb-4 text-muted">
-                {% trans "Already have an account?" %}
+                Hesabın var mı?
                 <a href="{% url 'auth' %}?next={{ request.GET.next }}">
-                    {% trans "Sign in" %}
+                    Giriş yap
                 </a>
             </p>
         </div>
@@ -29,7 +29,7 @@
 
                     {{ form|crispy }}
 
-                    <button type="submit" class="btn btn-primary">{% trans "Sign up" %}</button>
+                    <button type="submit" class="btn btn-primary">Kayıt ol</button>
 
                 </form>
 

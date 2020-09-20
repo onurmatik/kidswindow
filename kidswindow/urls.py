@@ -3,9 +3,9 @@ from django.urls import path, include
 from django.views.generic import TemplateView, RedirectView
 from django.utils.translation import ugettext as _
 from django.contrib.auth.views import LoginView
-from kidswindow.meetings.views import meeting_list, meeting_detail
+from kidswindow.meetings.views import meeting_list, meeting_detail, meeting_create
 from kidswindow.profiles.views import signup, AuthForm, activate
-from kidswindow.views import IndexView, set_language
+from kidswindow.views import IndexView
 
 
 urlpatterns = [
@@ -20,10 +20,9 @@ urlpatterns = [
     path('signup/', signup, name='signup'),
     path('activate/<str:uidb64>/<str:token>/', activate, name='activate'),
 
-    path('lang/', set_language, name='set_lang'),
-
     path('', IndexView.as_view(), name='index'),
 
+    path('meetings/form/', meeting_create, name='meeting_create'),
     path('meetings/<slug:meeting_slug>/', meeting_detail, name='meeting_detail'),
     path('meetings/', meeting_list, name='meeting_list'),
 

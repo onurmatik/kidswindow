@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-29 15:44+0000\n"
+"POT-Creation-Date: 2020-09-20 10:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: kidswindow/games/apps.py:7 kidswindow/games/models.py:14
-#: kidswindow/profiles/models.py:19
 msgid "games"
 msgstr "oyunlar"
 
@@ -27,189 +26,85 @@ msgstr "oyunlar"
 msgid "name"
 msgstr "isim"
 
-#: kidswindow/games/models.py:13 kidswindow/meetings/models.py:10
-#: kidswindow/meetings/models.py:78 kidswindow/profiles/models.py:36
+#: kidswindow/games/models.py:13 kidswindow/meetings/models.py:11
 msgid "game"
 msgstr "oyun"
 
-#: kidswindow/meetings/apps.py:7 kidswindow/meetings/models.py:61
+#: kidswindow/meetings/apps.py:7 kidswindow/meetings/models.py:53
 msgid "meetings"
 msgstr "buluşmalar"
 
-#: kidswindow/meetings/models.py:11 kidswindow/meetings/models.py:84
-#: kidswindow/meetings/models.py:100 kidswindow/profiles/models.py:39
-#: kidswindow/profiles/models.py:61
+#: kidswindow/meetings/models.py:12
 msgid "time"
 msgstr "zaman"
 
-#: kidswindow/meetings/models.py:19
-msgid "meeting host"
-msgstr "oturum yöneticisi"
-
-#: kidswindow/meetings/models.py:21
-msgid "Start URL"
-msgstr "Başlatma bağlantısı"
-
-#: kidswindow/meetings/models.py:22
-msgid "Join URL"
-msgstr "Katılım bağlantısı"
-
-#: kidswindow/meetings/models.py:28
-msgid "participants"
-msgstr "katılımcılar"
-
-#: kidswindow/meetings/models.py:30
-msgid "meeting type"
-msgstr "buluşma tipi"
-
-#: kidswindow/meetings/models.py:31
-msgid "play"
-msgstr "oyna"
-
-#: kidswindow/meetings/models.py:32
-msgid "community meeting"
-msgstr "topluluk buluşması"
-
-#: kidswindow/meetings/models.py:36
-msgid "no host"
-msgstr "kolaylaştırıcı yok"
-
-#: kidswindow/meetings/models.py:37
-msgid "no participant"
-msgstr "katılımcı yok"
-
-#: kidswindow/meetings/models.py:38
-msgid "other"
-msgstr "diğer"
-
-#: kidswindow/meetings/models.py:52
-#, python-format
-msgid "KidsWindow_%(game)s_%(code)s"
-msgstr "KidsWindow_%(game)s_%(code)s"
-
-#: kidswindow/meetings/models.py:60 kidswindow/meetings/models.py:65
-#: kidswindow/meetings/models.py:92
-msgid "meeting"
-msgstr "buluşma"
-
-#: kidswindow/meetings/models.py:66 kidswindow/meetings/models.py:80
-msgid "participant"
-msgstr "katılımcı"
-
-#: kidswindow/meetings/models.py:67 kidswindow/meetings/models.py:79
-#: kidswindow/meetings/models.py:81
-msgid "co-host"
-msgstr "kolaylaştırıcı"
-
-#: kidswindow/meetings/models.py:68
-msgid "time joined"
-msgstr "katılma zamanı"
-
-#: kidswindow/meetings/models.py:72
-msgid "meeting participant"
-msgstr "katılımcı"
-
-#: kidswindow/meetings/models.py:73
-msgid "meeting participants"
-msgstr "katılımcılar"
-
-#: kidswindow/meetings/models.py:77 kidswindow/meetings/models.py:93
-#: kidswindow/profiles/models.py:12 kidswindow/profiles/models.py:52
-msgid "user"
-msgstr "kullanıcı"
-
-#: kidswindow/meetings/models.py:83 kidswindow/meetings/models.py:99
-#: kidswindow/profiles/models.py:60
+#: kidswindow/meetings/models.py:13
 msgid "notes"
 msgstr "notlar"
 
-#: kidswindow/meetings/models.py:87
-msgid "meeting request"
-msgstr "buluşma talebi"
+#: kidswindow/meetings/models.py:14
+msgid "is public?"
+msgstr "herkese açık mı?"
 
-#: kidswindow/meetings/models.py:88
-msgid "meeting requests"
-msgstr "buluşma talepleri"
+#: kidswindow/meetings/models.py:16
+msgid "is active?"
+msgstr "aktif mi?"
 
-#: kidswindow/meetings/models.py:94
-msgid "rate"
-msgstr "puan"
+#: kidswindow/meetings/models.py:23
+msgid "meeting host"
+msgstr "oturum yöneticisi"
 
-#: kidswindow/meetings/models.py:95
-msgid "Poor"
-msgstr "Yetersiz"
+#: kidswindow/meetings/models.py:30
+msgid "participants"
+msgstr "katılımcılar"
 
-#: kidswindow/meetings/models.py:96
-msgid "OK"
-msgstr "Orta"
+#: kidswindow/meetings/models.py:32
+msgid "Meeting type"
+msgstr "Buluşma tipi"
 
-#: kidswindow/meetings/models.py:97
-msgid "Good"
-msgstr "İyi"
+#: kidswindow/meetings/models.py:33
+msgid "Game"
+msgstr "Oyun"
 
-#: kidswindow/meetings/models.py:103
-msgid "meeting poll"
-msgstr "buluşma anketi"
+#: kidswindow/meetings/models.py:34
+msgid "Event"
+msgstr "Etkinlik"
 
-#: kidswindow/meetings/models.py:104
-msgid "meeting polls"
-msgstr "buluşma anketleri"
+#: kidswindow/meetings/models.py:35
+msgid "Tournament"
+msgstr "Turnuva"
 
-#: kidswindow/meetings/views.py:28
-msgid "I want to co-host this session"
-msgstr "Bu oturumda kolaylaştırıcı olmak istiyorum"
+#: kidswindow/meetings/models.py:52 kidswindow/meetings/models.py:57
+msgid "meeting"
+msgstr "buluşma"
 
-#: kidswindow/meetings/views.py:33
-msgid ""
-"Co-hosts are facilitators of the session and guide the participants. <a href="
-"\"{}\">Learn more</a>."
-msgstr ""
-"Kolaylaştırıcılar katılımcılara dil ve sosyalleşme konularında yardımcı "
-"olurlar. <a href=\"{}\">Daha fazla bilgi</a>."
+#: kidswindow/meetings/models.py:58
+msgid "participant"
+msgstr "katılımcı"
 
-#: kidswindow/meetings/views.py:131
-msgid "Your role"
-msgstr "Oturuma katılım şeklin"
+#: kidswindow/meetings/models.py:59
+msgid "time joined"
+msgstr "katılma zamanı"
 
-#: kidswindow/meetings/views.py:134
-msgid "Game you are suggesting."
-msgstr "Önerdiğin oyun."
+#: kidswindow/meetings/models.py:63
+msgid "meeting participant"
+msgstr "katılımcı"
 
-#: kidswindow/meetings/views.py:135
-msgid "You can participate in a meeting to play the game or tutor the session."
-msgstr "Bir oyuna katılabilir veya oyunda kolaylaştırıcı olabilirsin."
-
-#: kidswindow/meetings/views.py:136
-msgid "Specify if you have anything to add."
-msgstr "Eklemek istediklerin."
-
-#: kidswindow/meetings/views.py:158
-msgid "Thank you! Your sugestion is recorded."
-msgstr "Teşekkürler! Önerini aldık."
+#: kidswindow/meetings/models.py:64
+msgid "meeting participants"
+msgstr "katılımcılar"
 
 #: kidswindow/profiles/apps.py:7
 msgid "profiles"
 msgstr "profiller"
 
-#: kidswindow/profiles/models.py:14
-msgid "timezone"
-msgstr "saat dilimi"
+#: kidswindow/profiles/models.py:13
+msgid "user"
+msgstr "kullanıcı"
 
-#: kidswindow/profiles/models.py:21
+#: kidswindow/profiles/models.py:16
 msgid "email confirmed"
 msgstr "eposta onaylandı"
-
-#: kidswindow/profiles/models.py:31
-msgid "profile"
-msgstr "profil"
-
-#: kidswindow/profiles/models.py:38
-msgid "tutor"
-msgstr "eğitici"
-
-#: kidswindow/profiles/models.py:58
-msgid "reported by"
-msgstr "rapor eden"
 
 #: kidswindow/profiles/views.py:18 kidswindow/profiles/views.py:23
 msgid "Email"
@@ -224,6 +119,7 @@ msgid "You are already logged in!"
 msgstr "Zaten giriş yapmış durumdasın!"
 
 #: kidswindow/profiles/views.py:45
+#, python-format
 msgid "Welcome to Kids Window! A confirmation email is sent to %s."
 msgstr "Kids Window'a hoşgeldin! Onay epostası %s adresine gönderildi."
 
@@ -239,7 +135,7 @@ msgstr "Epostan başarıyla onaylandı!"
 msgid "Email confirmation failed!"
 msgstr "Eposta onayı başarısız oldu!"
 
-#: kidswindow/settings.py:123
+#: kidswindow/settings.py:107
 msgid "Turkish"
 msgstr ""
 
@@ -366,7 +262,7 @@ msgstr ""
 "Birinin davranış kurallarını ihlal ettiğini düşünüyorsanız, lütfen conduct "
 "[at] lingo.cafe adresine e-posta ile bildirin."
 
-#: kidswindow/templates/docs/details.html:5 kidswindow/templates/index.html:142
+#: kidswindow/templates/docs/details.html:5
 msgid "About"
 msgstr "Hakkında"
 
@@ -375,190 +271,14 @@ msgstr "Hakkında"
 msgid "Privacy Policy"
 msgstr "Gizlilik politikası"
 
-#: kidswindow/templates/index.html:18
-msgid "Your meeting is live now!"
-msgstr "Buluşma şu anda gerçekleşiyor!"
-
-#: kidswindow/templates/index.html:20
-msgid "Your next meeting:"
-msgstr "Gelecek buluşman"
-
-#: kidswindow/templates/index.html:34
-msgid "Your meetings"
-msgstr "Buluşmaların"
-
-#: kidswindow/templates/index.html:51
-msgid "Now"
-msgstr "Şimdi"
-
-#: kidswindow/templates/index.html:64
-msgid "Upcoming"
-msgstr "Yaklaşan"
-
-#: kidswindow/templates/index.html:67
-msgid "Gaming sessions"
-msgstr "Oyun buluşmaları"
-
-#: kidswindow/templates/index.html:80
-msgid "There are no scheduled meetings."
-msgstr "Planlanmış oturum bulunmuyor."
-
-#: kidswindow/templates/index.html:87
-msgid "Recommended"
-msgstr "Önerilen"
-
-#: kidswindow/templates/index.html:108
-msgid "Community meetings"
-msgstr "Topluluk buluşmaları"
-
-#: kidswindow/templates/index.html:111
-msgid "Discussions about the Kids Window community"
-msgstr "Kids Window ile ilgili önerilerin konuşulduğu oturumlar"
-
-#: kidswindow/templates/index.html:131
-#: kidswindow/templates/meetings/request_form.html:27
-msgid "Suggest"
-msgstr "Öner"
-
-#: kidswindow/templates/index.html:134
-msgid "Want to start a game or tutor a session?"
-msgstr "Bir oyun başlatmak veya kolaylaştırıcı olmak ister misin?"
-
-#: kidswindow/templates/index.html:137
-#: kidswindow/templates/meetings/request_form.html:5
-#: kidswindow/templates/meetings/request_form.html:13
-msgid "Suggest a meeting"
-msgstr "Buluşma öner"
-
-#: kidswindow/templates/index.html:148
-msgid ""
-"Kids Window is a free and open platform for kids to play conventional games "
-"online via video calls."
-msgstr ""
-"Kids Window çocukların online video buluşmalarıyla oyun oynamaları için açık "
-"ve ücretsiz bir platformdur."
-
-#: kidswindow/templates/index.html:157
-msgid "Details"
-msgstr "Detaylar"
-
-#: kidswindow/templates/index.html:166
-#: kidswindow/templates/registration/login.html:41
-msgid "Login"
-msgstr "Giriş"
-
-#: kidswindow/templates/index.html:168
-#: kidswindow/templates/registration/login.html:20
-#: kidswindow/templates/registration/signup.html:32
-msgid "Sign up"
-msgstr "Kayıt ol"
-
-#: kidswindow/templates/index.html:190
-msgid "Are you sure you want to cancel your participation?"
-msgstr "Katılımını iptal etmek istediğine emin misin?"
-
 #: kidswindow/templates/meetings/meeting_detail.html:18
 msgid "Community meeting"
 msgstr "Topluluk buluşması"
 
 #: kidswindow/templates/meetings/meeting_detail.html:23
-#: kidswindow/templates/meetings/rsvp_form.html:13
 #, python-format
 msgid "%(meeting)s session"
 msgstr "%(meeting)s buluşması"
-
-#: kidswindow/templates/meetings/meeting_detail.html:42
-msgid "Resource"
-msgstr "Kaynak"
-
-#: kidswindow/templates/meetings/meeting_detail.html:45
-msgid "Level"
-msgstr "Seviye"
-
-#: kidswindow/templates/meetings/meeting_detail.html:75
-msgid ""
-"Community meetings are open sessions for discussing the current issues and "
-"the future of the Lingo community."
-msgstr ""
-"Topluluk buluşmaları, Lingo ile ilgili önerilerin konuşulduğu oturumlardır."
-
-#: kidswindow/templates/meetings/meeting_detail.html:93
-msgid "You are hosting this session."
-msgstr "Bu oturumu sen yönetiyorsun."
-
-#: kidswindow/templates/meetings/meeting_detail.html:95
-msgid "Start the meeting"
-msgstr "Oturumu başlat"
-
-#: kidswindow/templates/meetings/meeting_detail.html:103
-msgid "You are co-hosting this session."
-msgstr "Bu oturumun kolaylaştırıcısısın."
-
-#: kidswindow/templates/meetings/meeting_detail.html:105
-msgid "You are attending this session."
-msgstr "Bu oturuma katılıyorsun."
-
-#: kidswindow/templates/meetings/meeting_detail.html:113
-msgid "Go to the meeting"
-msgstr "Buluşmaya git"
-
-#: kidswindow/templates/meetings/meeting_detail.html:117
-#: kidswindow/templates/meetings/meeting_detail.html:197
-#, python-format
-msgid "%(timeuntil)s left"
-msgstr "%(timeuntil)s kaldı"
-
-#: kidswindow/templates/meetings/meeting_detail.html:123
-msgid "Cancel your participation"
-msgstr "Katılımını iptal et"
-
-#: kidswindow/templates/meetings/meeting_detail.html:131
-#: kidswindow/templates/meetings/meeting_detail.html:136
-msgid "Join this session!"
-msgstr "Sen de katıl!"
-
-#: kidswindow/templates/meetings/meeting_detail.html:159
-msgid "Reserve your place"
-msgstr "Yerini ayırt"
-
-#: kidswindow/templates/meetings/meeting_detail.html:163
-#, python-format
-msgid ""
-"By joining a session, you accept the community <a href=\"%(url_conduct)s"
-"\">code of conduct</a>."
-msgstr ""
-"Oturuma katılarak, topluluk <a href=\"%(url_conduct)s\">kullanım "
-"kurallarını</a> kabul etmiş oluyorsun."
-
-#: kidswindow/templates/meetings/meeting_detail.html:185
-msgid "This meeting is finished!"
-msgstr "Bu buluşma bitti!"
-
-#: kidswindow/templates/meetings/meeting_detail.html:195
-#, python-format
-msgid "Next %(meeting)s session"
-msgstr "Gelecek %(meeting)s buluşması"
-
-#: kidswindow/templates/meetings/meeting_detail.html:210
-#, python-format
-msgid "Join the %(meeting)s session @ %(time)s"
-msgstr "%(meeting)s buluşmasına katıl @ %(time)s"
-
-#: kidswindow/templates/meetings/meeting_detail.html:211
-msgid "Share on Twitter"
-msgstr "Twitter'da paylaş"
-
-#: kidswindow/templates/meetings/rsvp_form.html:34
-msgid "I want to practice"
-msgstr "Pratik yapmak istiyorum"
-
-#: kidswindow/templates/meetings/rsvp_form.html:44
-msgid "I want to co-host"
-msgstr "Kolaylaştırıcı olmak istiyorum"
-
-#: kidswindow/templates/meetings/rsvp_form.html:54
-msgid "Count me in!"
-msgstr "Beni de ekle!"
 
 #: kidswindow/templates/registration/login.html:5
 #, python-format
@@ -569,293 +289,14 @@ msgstr ""
 "Lütfen %(username)s ve parolanı kontrol et. Her iki alan da büyük küçük "
 "harfe duyarlıdır."
 
-#: kidswindow/templates/registration/login.html:13
-msgid "Please login"
-msgstr "Lütfen giriş yap"
-
-#: kidswindow/templates/registration/login.html:18
-msgid "Don't have an account?"
-msgstr "Hesabın yok mu?"
-
-#: kidswindow/templates/registration/signup.html:13
-msgid "Already have an account?"
-msgstr "Hesabın var mı?"
-
-#: kidswindow/templates/registration/signup.html:15
-msgid "Sign in"
-msgstr "Giriş yap"
-
-#: kidswindow/urls.py:37
+#: kidswindow/urls.py:33
 msgid "Kids Window"
 msgstr "Kids Window"
 
-#: kidswindow/urls.py:38
+#: kidswindow/urls.py:34
 msgid "Kids Window Administration"
 msgstr "Kids Window Yönetimi"
 
-#: kidswindow/urls.py:39
+#: kidswindow/urls.py:35
 msgid "Kids Window Management"
 msgstr "Kids Window Yönetimi"
-
-#~ msgid "Welcome!"
-#~ msgstr "Hoşgeldin!"
-
-#~ msgid ""
-#~ "Lingo Cafe is an open community of people practising language and "
-#~ "socializing."
-#~ msgstr ""
-#~ "Lingo Cafe dil pratiği yapmak için kurulmuş açık ve ücretsiz bir sosyal "
-#~ "alandır."
-
-#~ msgid ""
-#~ "It connects practitioners to a variety of tutors who assist them through "
-#~ "an informal learning process."
-#~ msgstr ""
-#~ "Dil pratiği yapmak isteyenlerle gönüllü eğitmen ve kolaylaştırıcıları "
-#~ "arkadaşça bir öğrenme sürecinde buluşturur."
-
-#~ msgid "We meet over online video conference calls."
-#~ msgstr "Çevrimiçi video konferans görüşmeleri üzerinden bir araya geliriz."
-
-#~ msgid ""
-#~ "Sessions last up to 2 hours. You can join and leave anytime during the "
-#~ "sessions."
-#~ msgstr ""
-#~ "Oturumlar 2 saate kadar sürer. Oturumlar boyunca istediğiniz zaman "
-#~ "katılabilir ve ayrılabilirsiniz."
-
-#~ msgid ""
-#~ "Conversations usually take place in groups of 5 or less people depending "
-#~ "on the total number of participants and facilitators."
-#~ msgstr ""
-#~ "Sohbetler genellikle toplam katılımcı ve kolaylaştırıcı sayısına bağlı "
-#~ "olarak 5 veya daha az kişilik gruplar halinde yapılır."
-
-#~ msgid "The chat rooms are managed by the hosts."
-#~ msgstr "Sohbet odaları kolaylaştırıcılar tarafından yönetilir."
-
-#~ msgid ""
-#~ "You will have a chance to participate in many groups during a session."
-#~ msgstr ""
-#~ "Katılımcıların bir oturum sırasında birçok gruba katılma şansı olur."
-
-#~ msgid "Each meeting has one practice language."
-#~ msgstr "Her toplantının pratik edilen bir tane dili vardır."
-
-#~ msgid ""
-#~ "Participants are expected to have at least a very basic level of "
-#~ "understanding of the session's language."
-#~ msgstr ""
-#~ "Katılımcıların oturumun dilini en azından çok temel düzeyde biliyor "
-#~ "olmaları beklenir."
-
-#~ msgid ""
-#~ "During the sessions, hosts guide the participants by facilitating "
-#~ "conversations and assisting them during their practices."
-#~ msgstr ""
-#~ "Oturumlar sırasında kolaylaştırıcılar, konuşmaları yönlendirerek ve "
-#~ "pratik çalışması sırasında onlara yardımcı olarak katılımcılara rehberlik "
-#~ "eder."
-
-#~ msgid ""
-#~ "Anyone having fluency in the language of the session can volunteer to be "
-#~ "a co-host."
-#~ msgstr ""
-#~ "Oturumun dilini akıcı bir şekilde konuşabilen herkes gönüllü "
-#~ "kolaylaştırıcı olabilir."
-
-#~ msgid ""
-#~ "Please indicate your intention to be a co-host when you are signing up "
-#~ "for meeting."
-#~ msgstr ""
-#~ "Lütfen toplantıya kaydolurken kolaylaştırıcı olma isteğinizi belirtin."
-
-#, python-format
-#~ msgid ""
-#~ "Before participating in any activity, please make sure you fully agree "
-#~ "with the community <a href=\"%(url_conduct)s\">code of conduct</a>."
-#~ msgstr ""
-#~ "Herhangi bir etkinliğe katılmadan önce, lütfen <a href=\"%(url_conduct)s"
-#~ "\">topluluk kurallarını</a> okuyun ve tamamen benimsediğinizden emin olun."
-
-#~ msgid "Code of conduct"
-#~ msgstr "Topluluk kuralları"
-
-#, python-format
-#~ msgid ""
-#~ "Hi %(name)s,\n"
-#~ "\n"
-#~ "Please click on the link below to confirm your email address:\n"
-#~ "\n"
-#~ "https://lingo.cafe%(activation_url)s\n"
-#~ "\n"
-#~ "\n"
-#~ "See at a lingo meeting soon!\n"
-#~ msgstr ""
-#~ "Merhaba %(name)s,\n"
-#~ "\n"
-#~ "Eposta adresini doğrulamak için lütfen aşağıdaki bağlantıya tıkla:\n"
-#~ "\n"
-#~ "https://lingo.cafe%(activation_url)s\n"
-#~ "\n"
-#~ "\n"
-#~ "Yakında bir Lingo buluşmasında görüşmek üzere!\n"
-
-#~ msgid "Lingo Cafe"
-#~ msgstr "Lingo Cafe"
-
-#~ msgid "code"
-#~ msgstr "kod"
-
-#~ msgid ""
-#~ "I can catch some words in texts or speeches. From time to time, by "
-#~ "combining these words, I can grasp the context and the general meaning, "
-#~ "but I cannot get a complete idea of the content of the text / speech; I "
-#~ "have a hard time speaking / I cannot speak."
-#~ msgstr ""
-#~ "Metinlerde ya da konuşmalarda bazı kelimeleri yakalayabiliyorum. Bu "
-#~ "kelimeleri zaman zaman kafamda birleştirerek bağlamı ve genel anlamı "
-#~ "çıkarabiliyorum, fakat metnin / konuşmanın içeriğine dair tam bir fikir "
-#~ "edinemiyorum; konuşmakta çok zorlanıyorum/konuşamıyorum."
-
-#~ msgid ""
-#~ "When I read simple texts, I can get a rough idea of the general subject; "
-#~ "I can understand the main idea of slow and clear conversations; I cannot "
-#~ "understand complex texts or speeches; I have difficulty speaking / I "
-#~ "cannot speak."
-#~ msgstr ""
-#~ "Basit metinleri okuduğumda konunun geneline dair kabaca fikir "
-#~ "edinebiliyorum; yavaş ve net olan konuşmaların ana fikrini "
-#~ "anlayabiliyorum; Karmaşık metin ve konuşmaları anlayamıyorum; Konuşmakta "
-#~ "zorlanıyorum / konuşamıyorum."
-
-#~ msgid ""
-#~ "I can understand texts / speeches mostly unless they are complex, but I "
-#~ "want to grasp more and master the whole. I can speak slowly with a "
-#~ "limited vocabulary, I want to be fluent, improve my vocabulary."
-#~ msgstr ""
-#~ "Karmaşık olanlar haricinde metinleri / konuşmaların çoğunu "
-#~ "anlayabiliyorum, ama daha fazla kavramak, bütününe hakim olmak istiyorum. "
-#~ "Sınırlı bir kelime haznesiyle, yavaş ve kesik kesik konuşabiliyorum, "
-#~ "akıcılık kazanmak, kelime haznemi geliştirmek istiyorum."
-
-#~ msgid "language"
-#~ msgstr "dil"
-
-#~ msgid "meeting password"
-#~ msgstr "toplanti şifresi"
-
-#~ msgid "practice"
-#~ msgstr "pratik"
-
-#~ msgid "URL"
-#~ msgstr "URL"
-
-#~ msgid "title"
-#~ msgstr "başlık"
-
-#~ msgid "resource type"
-#~ msgstr "kaynak tipi"
-
-#~ msgid "reading"
-#~ msgstr "okuma"
-
-#~ msgid "listening"
-#~ msgstr "dinleme"
-
-#~ msgid "watching"
-#~ msgstr "izleme"
-
-#~ msgid "description"
-#~ msgstr "tanım"
-
-#~ msgid "level"
-#~ msgstr "seviye"
-
-#~ msgid "resource"
-#~ msgstr "kaynak"
-
-#~ msgid "Resource language does not match the meeting language."
-#~ msgstr "Kaynak dili buluşma dili ile aynı değil."
-
-#~ msgid "country"
-#~ msgstr "ülke"
-
-#~ msgid "Your country"
-#~ msgstr "Yaşadığın ülke"
-
-#~ msgid "The country you are living in."
-#~ msgstr "Yaşamakta olduğun ülke."
-
-#~ msgid "profile language"
-#~ msgstr "profil dili"
-
-#~ msgid "Email address"
-#~ msgstr "Eposta adresi"
-
-#~ msgid "Language practice meetings"
-#~ msgstr "Dil pratiği buluşmaları"
-
-#~ msgid "Please upload a document or provide a URL to a document."
-#~ msgstr "Lütfen bir doküman yükle veya doküman URL'i gir"
-
-#~ msgid "Either upload a document or provide a URL to a document; not both."
-#~ msgstr ""
-#~ "Ya bir doküman yükle ya da bir doküman URL'i gir; ikisini birden değil"
-
-#~ msgid "document"
-#~ msgstr "doküman"
-
-#~ msgid "There are no scheduled meetings for your profile languages."
-#~ msgstr "Profiline uygun oturum bulunmuyor."
-
-#~ msgid "Be friendly, welcoming and respectful"
-#~ msgstr "Arkadaşça ve saygılı davran"
-
-#~ msgid "How it works"
-#~ msgstr "Nasıl işliyor?"
-
-#~ msgid "Join!"
-#~ msgstr "Katıl!"
-
-#~ msgid "Participant"
-#~ msgstr "Katılımcı"
-
-#~ msgid "Co-host"
-#~ msgstr "Kolaylaştırıcı"
-
-#~ msgid "Practice the language"
-#~ msgstr "Bir dili pratik etmek"
-
-#~ msgid "Co-host the session"
-#~ msgstr "Bu oturumda kolaylaştırıcı ol"
-
-#~ msgid "Terms of use"
-#~ msgstr "Kullanım kuralları"
-
-#~ msgid "can co-host"
-#~ msgstr "kolaylaştırıcı"
-
-#~ msgid "Tutor"
-#~ msgstr "Eğitici olmak"
-
-#~ msgid "Message @lingo_cafe"
-#~ msgstr "@lingo_cafe'ye yaz"
-
-#~ msgid "You are tutoring at this session."
-#~ msgstr "Bu oturumda eğitmensin."
-
-#~ msgid "Meeting link"
-#~ msgstr "Toplantı bağlantısı"
-
-#~ msgid "Cancel"
-#~ msgstr "İptal"
-
-#~ msgid "There are no sessions at the moment."
-#~ msgstr "Şu anda bir oturum bulunmuyor."
-
-#~ msgid "Sign in / Sign up"
-#~ msgstr "Giriş yap"
-
-#~ msgid "Changed your mind?"
-#~ msgstr "Fikrini mi değiştirdin?"

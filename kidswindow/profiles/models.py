@@ -1,8 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
-from timezone_field import TimeZoneField
+from django.utils.functional import cached_property
 from kidswindow.games.models import Game
+from kidswindow.meetings.models import Meeting, MeetingParticipant
 
 
 class Profile(models.Model):
@@ -11,57 +12,18 @@ class Profile(models.Model):
         on_delete=models.CASCADE,
         verbose_name=_('user')
     )
-    timezone = TimeZoneField(_('timezone'), blank=True, null=True)
-    games = models.ManyToManyField(
-        Game,
-        through='ProfileGame',
-        blank=True,
-        verbose_name=_('games')
-    )
+    birth_year = models.PositiveSmallIntegerField(blank=True, null=True)
     email_confirmed = models.BooleanField(_('email confirmed'), default=False)
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.user.username
 
-
-class ProfileGame(models.Model):
-    profile = models.ForeignKey(
-        Profile,
-        on_delete=models.CASCADE,
-        verbose_name=_('profile')
-    )
-    game = models.ForeignKey(
-        Game,
-        on_delete=models.CASCADE,
-        verbose_name=_('game')
-    )
-    tutor = models.BooleanField(_('tutor'), default=False)
-    time = models.DateTimeField(_('time'), auto_now_add=True)
-
-    def __str__(self):
-        return str(_(self.game.name))
-
-    class Meta:
-        unique_together = (('profile', 'game'),)
-
-
-class Report(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        verbose_name=_('user')
-    )
-    reported_by = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='reported_set',
-        verbose_name=_('reported by')
-    )
-    notes = models.TextField(_('notes'), blank=True, null=True)
-    time = models.DateTimeField(_('time'), auto_now_add=True)
-
-    def __str__(self):
-        return self.user.username
+    @cached_property
+    def games(self):
+        meeting_ids = MeetingParticipant.objects.filter(participant=self.user).values_list('meeting', flat=True)
+        game_ids = Meeting.objects.filter(id__in=meeting_ids).values_list('game', flat=True)
+        return Game.objects.filter(id__in=game_ids)
 
 
 def create_profile(sender, instance, **kwargs):

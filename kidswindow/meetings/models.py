@@ -10,7 +10,11 @@ class Meeting(models.Model):
     slug = models.SlugField(blank=True, null=True, editable=False)
     game = models.ForeignKey(Game, verbose_name=_('game'), on_delete=models.CASCADE)
     time = models.DateTimeField(_('time'))
-    notes = models.TextField(blank=True, null=True)
+    notes = models.TextField(_('notes'), blank=True, null=True)
+    is_public = models.BooleanField(_('is public?'), default=True)
+
+    is_active = models.BooleanField(_('is active?'), default=False)
+
     host = models.ForeignKey(
         User,
         blank=True, null=True,
@@ -25,7 +29,11 @@ class Meeting(models.Model):
         related_name='participated_meetings',
         verbose_name=_('participants'),
     )
-    is_public = models.BooleanField(default=False)
+    type = models.CharField(_('Meeting type'), choices=(
+        ('g', _('Game')),
+        ('e', _('Event')),
+        ('t', _('Tournament')),
+    ), max_length=1, default='g')
 
     def __str__(self):
         return str(_(self.game.name))
@@ -48,26 +56,9 @@ class Meeting(models.Model):
 class MeetingParticipant(models.Model):
     meeting = models.ForeignKey(Meeting, on_delete=models.CASCADE, verbose_name=_('meeting'))
     participant = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name=_('participant'))
-    tutor = models.BooleanField(_('co-host'), default=False)
     joined = models.DateTimeField(_('time joined'), auto_now_add=True)
 
     class Meta:
         unique_together = (('meeting', 'participant'),)
         verbose_name = _('meeting participant')
         verbose_name_plural = _('meeting participants')
-
-
-class MeetingPoll(models.Model):
-    meeting = models.ForeignKey(Meeting, on_delete=models.CASCADE, verbose_name=_('meeting'))
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name=_('user'))
-    rate = models.PositiveSmallIntegerField(_('rate'), choices=(
-        (1, _('Poor')),
-        (2, _('OK')),
-        (3, _('Good')),
-    ))
-    notes = models.TextField(_('notes'), blank=True, null=True)
-    time = models.DateTimeField(_('time'), auto_now_add=True)
-
-    class Meta:
-        verbose_name = _('meeting poll')
-        verbose_name_plural = _('meeting polls')

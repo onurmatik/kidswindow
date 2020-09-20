@@ -10,14 +10,14 @@
 	<div class="container">
 
         <h4 class="text-center my-4">
-            {% trans "Please login" %}
+            Giriş yapman gerekiyor!
         </h4>
 
         <div class="text-center">
             <p class="mt-4 mb-4 text-muted">
-                {% trans "Don't have an account?" %}
+                Hesabın yok mu?
                 <a href="{% url 'signup' %}?next={{ request.GET.next }}">
-                    {% trans "Sign up" %}
+                    Kayıt ol
                 </a>
             </p>
         </div>
@@ -38,7 +38,7 @@
 
                                 {{ form|crispy }}
 
-                                <button type="submit" class="btn btn-primary">{% trans "Login" %}</button>
+                                <button type="submit" class="btn btn-primary">Giriş yap</button>
 
                             </td>
                         </tr>
@@ -48,7 +48,7 @@
                 </form>
 
 
-                {#<p><a href="{% url 'password_reset' %}">Lost password?</a></p>#}
+                {#<p><a href="{% url 'password_reset' %}">Şifreni mi unuttun?</a></p>#}
 
             </div>
 

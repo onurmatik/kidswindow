@@ -55,7 +55,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><span class="oi oi-link-intact"></span></span></span></span>
                 </div>
-                <input type="text" class="form-control" value="https://kidswindow.online{{ meeting.get_absolute_url }}" aria-label="{% trans "Campaign link" %}" onClick="this.setSelectionRange(0, this.value.length)">
+                <input type="text" class="form-control" value="https://kidswindow.online{{ meeting.get_absolute_url }}" onClick="this.setSelectionRange(0, this.value.length)">
             </div>
 
         </p>
@@ -65,7 +65,7 @@
         <div class="row">
             <div class="offset-md-2 col-md-8">
                 <div class="alert alert-warning my-4" role="alert">
-                    <strong>{% trans "This meeting is finished!" %}</strong>
+                    <strong>Buluşma sona ermiş!</strong>
                 </div>
             </div>
         </div>
@@ -75,9 +75,9 @@
 				<div class="col-md-8 offset-md-2">
 					<div class="alert alert-success mb-3 show" role="alert">
 						<strong>
-                            {% blocktrans %}Next {{ meeting }} session{% endblocktrans %}:
+                            Gelecek {{ meeting }} buluşması:
 							<a href="{{ meeting.get_absolute_url }}">{{ meeting.time }}</a>
-                            <small>({% blocktrans with meeting_next.time|timeuntil as timeuntil %}{{ timeuntil }} left{% endblocktrans %})</small>
+                            <small>({{ meeting_next.time|timeuntil }} sonra)</small>
 						</strong>
 					</div>
 				</div>
@@ -117,6 +117,7 @@
         }
     };
     const api = new JitsiMeetExternalAPI(domain, options);
+    api.executeCommand('toggleLobby', true);
 </script>
 
 <script>
