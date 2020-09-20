@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-20 10:44+0000\n"
+"POT-Creation-Date: 2020-09-20 10:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgstr "katılımcı"
 msgid "meeting participants"
 msgstr "katılımcılar"
 
-#: kidswindow/profiles/apps.py:7
+#: kidswindow/profiles/apps.py:7 kidswindow/profiles/models.py:30
 msgid "profiles"
 msgstr "profiller"
 
@@ -105,6 +105,10 @@ msgstr "kullanıcı"
 #: kidswindow/profiles/models.py:16
 msgid "email confirmed"
 msgstr "eposta onaylandı"
+
+#: kidswindow/profiles/models.py:29
+msgid "profile"
+msgstr "profil"
 
 #: kidswindow/profiles/views.py:18 kidswindow/profiles/views.py:23
 msgid "Email"

@@ -25,6 +25,10 @@ class Profile(models.Model):
         game_ids = Meeting.objects.filter(id__in=meeting_ids).values_list('game', flat=True)
         return Game.objects.filter(id__in=game_ids)
 
+    class Meta:
+        verbose_name = _('profile')
+        verbose_name_plural = _('profiles')
+
 
 def create_profile(sender, instance, **kwargs):
     Profile.objects.get_or_create(
