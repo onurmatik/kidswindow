@@ -12,9 +12,15 @@
 
 			<p class="mt-2">
 
-				<a href="{{ meeting_now.get_absolute_url }}">
-					{{ meeting_now }} @ {{ meeting_now.time }}
-				</a>
+				{% for meeting in meetings_now %}
+
+					<p class="mt-2">
+						<a href="{{ meeting.get_absolute_url }}">
+							{{ meeting }} @ {{ meeting.time }}
+						</a>
+					</p>
+
+				{% endfor %}
 
 			</p>
 
