@@ -20,7 +20,7 @@ class IndexView(TemplateView):
             'meetings_now': meetings.filter(
                 time__lte=now,
                 time__gt=now - timedelta(minutes=DEFAULT_MEETING_DURATION_MINS)
-            ).first(),
+            ),
             'upcoming_games': meetings.filter(
                 time__gte=now,
                 type='g',
