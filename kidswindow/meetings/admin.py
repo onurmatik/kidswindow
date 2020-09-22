@@ -2,6 +2,11 @@ from django.contrib import admin
 from .models import Meeting, MeetingParticipant
 
 
+class MeetingParticipantInline(admin.TabularInline):
+    model = MeetingParticipant
+    extra = 0
+
+
 @admin.register(Meeting)
 class MeetingAdmin(admin.ModelAdmin):
     list_display = ['game', 'is_public', 'host', 'is_active', 'time', 'slug']
@@ -9,6 +14,7 @@ class MeetingAdmin(admin.ModelAdmin):
     list_filter = ['game', 'time', 'is_public', 'is_active']
     search_fields = ['host__username', 'game__name']
     autocomplete_fields = ['game', 'host', 'participants']
+    inlines = [MeetingParticipantInline]
 
 
 @admin.register(MeetingParticipant)
