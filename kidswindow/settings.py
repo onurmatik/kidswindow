@@ -138,6 +138,7 @@ EMAIL_BACKEND = 'django_ses.SESBackend'
 DEFAULT_FROM_EMAIL = 'Kids Window <hello@kidswindow.online>'
 
 ADMIN_EMAILS = [
+    'nguveloglu@hotmail.com',
     'onurmatik@gmail.com',
 ]
 
