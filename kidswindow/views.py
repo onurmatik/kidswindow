@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from kidswindow.meetings.models import Meeting
 
 
-DEFAULT_MEETING_DURATION_MINS = 60
+DEFAULT_MEETING_DURATION_MINS = 120
 
 
 class IndexView(TemplateView):
